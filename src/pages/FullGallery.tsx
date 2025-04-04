@@ -4,6 +4,8 @@ import Button from "@/components/Button";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
+import d from "../assets/d.jpg";
+import Footer from "@/components/Footer";
 
 const FullGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -11,27 +13,27 @@ const FullGallery = () => {
   
   const galleryImages = [
     {
-      src: "https://source.unsplash.com/random/800x600/?school,classroom",
+      src: d,
       alt: "Modern classroom with students"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?children,playing",
+      src: d,
       alt: "Children playing in schoolyard"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?library,kids",
+      src: d,
       alt: "School library with students reading"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?art,class",
+      src: d,
       alt: "Art class in session"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?music,children",
+      src: d,
       alt: "Music lesson at school"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?sports,school",
+      src: d,
       alt: "School sports activities"
     }
   ];
@@ -99,6 +101,7 @@ const FullGallery = () => {
             </div>
           </div>
         )}
+        <Footer />
       </div>
     </Section>
   );

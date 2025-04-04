@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -54,12 +53,12 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <img
-        src={complex}
-        alt="logo"
-        className="w-24 h-24 rounded-full  "
-          />
-            <span className="text-lime-500 font-bold text-2xl ">Groupe Scolaire Bilingue</span>
-            <span className="text-yellow-400 font-medium text-2xl">Awono Bilogue </span>
+              src={complex}
+              alt="logo"
+              className="w-16 h-16 md:w-24 md:h-24 rounded-full"
+            />
+            <span className="text-lime-500 font-bold text-lg md:text-2xl">Groupe Scolaire Bilingue</span>
+            <span className="text-yellow-400 font-medium text-lg md:text-2xl">Awono Bilogue</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -98,12 +97,20 @@ const Header = () => {
         "fixed inset-0 z-40 bg-background flex flex-col transition-transform duration-300 ease-in-out pt-24 px-6",
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
-        <nav className="flex flex-col space-y-6">
+        <button
+          type="button"
+          className="absolute top-6 right-6 text-foreground"
+          onClick={toggleMenu}
+          aria-label="Close menu"
+        >
+          <X size={32} />
+        </button>
+        <nav className="flex flex-col space-y-6 mt-12 text-center">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className="text-foreground/80 hover:text-lime-500 transition-colors duration-200 text-2xl font-medium"
+              className="text-foreground/80 hover:text-lime-500 transition-colors duration-200 text-xl md:text-2xl font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}

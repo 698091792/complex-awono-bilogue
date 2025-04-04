@@ -2,6 +2,7 @@ import Header from "./Header";
 import Section from "./Section";
 import Button from "./Button";
 import { ArrowRight } from "lucide-react";
+import aa from "../assets/aa.jpg";
 
 interface ProgramCardProps {
   title: string;
@@ -45,19 +46,19 @@ const ProgramsSection = () => {
       title: "Early Years Foundation",
       ageGroup: "Ages 4-5",
       description: "A nurturing start to education focusing on play-based learning, basic literacy, numeracy, and social skills development.",
-      imageSrc: "https://source.unsplash.com/random/800x450/?kindergarten,children"
+      imageSrc: aa
     },
     {
       title: "Primary Education",
       ageGroup: "Ages 6-8",
       description: "Building core academic foundations in literacy, mathematics, science, and arts while fostering curiosity and confidence.",
-      imageSrc: "https://source.unsplash.com/random/800x450/?classroom,elementary"
+      imageSrc: aa
     },
     {
       title: "Upper Primary",
       ageGroup: "Ages 9-11",
       description: "Advanced curriculum that prepares students for secondary education with project-based learning and critical thinking skills.",
-      imageSrc: "https://source.unsplash.com/random/800x450/?school,students"
+      imageSrc: aa
     }
   ];
 

@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Check, Award, Heart, Users } from "lucide-react";
 import room from "../assets/room.jpg"
+import c from "../assets/c.jpg"
 
 const About = () => {
   return (
@@ -236,7 +237,7 @@ const About = () => {
               <div className="bg-white rounded-xl overflow-hidden shadow-subtle border border-border/50 ">
                 <div className="aspect-square">
                   <img 
-                    src="https://source.unsplash.com/random/400x400/?headshot,woman" 
+                    src={c} 
                     alt="Dr. Emily Wilson" 
                     className="w-full h-full object-cover"
                   />
@@ -254,7 +255,7 @@ const About = () => {
               <div className="bg-white rounded-xl overflow-hidden shadow-subtle border border-border/50 ">
                 <div className="aspect-square">
                   <img 
-                    src="https://source.unsplash.com/random/400x400/?headshot,man" 
+                    src={c}
                     alt="Michael Bennett" 
                     className="w-full h-full object-cover"
                   />
@@ -272,7 +273,7 @@ const About = () => {
               <div className="bg-white rounded-xl overflow-hidden shadow-subtle border border-border/50">
                 <div className="aspect-square">
                   <img 
-                    src="https://source.unsplash.com/random/400x400/?headshot,woman,2" 
+                    src={c}
                     alt="Sarah Martinez" 
                     className="w-full h-full object-cover"
                   />
@@ -289,7 +290,7 @@ const About = () => {
             </div>
             
             <div className="text-center mt-12 animate-reveal">
-              <Button href="/team" variant="outline">
+              <Button href="/team" variant="primary">
                 View All Staff Members
               </Button>
             </div>

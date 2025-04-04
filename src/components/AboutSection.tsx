@@ -1,4 +1,4 @@
-import complex from "../assets/complex .jpg";
+import a from "../assets/a.jpeg";
 import Section from "./Section";
 import Button from "./Button";
 
@@ -11,7 +11,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="relative z-10 rounded-xl overflow-hidden shadow-glass animate-reveal">
                 <img 
-                  src={complex} 
+                  src={a} 
                   alt="Sunshine Primary School building" 
                   className="w-full object-cover aspect-[4/3]"
                   loading="lazy"

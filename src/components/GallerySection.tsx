@@ -4,33 +4,35 @@ import Section from "./Section";
 import Button from "./Button";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import bb from "../assets/bb.jpg";
+import bbb from "../assets/bbb.jpg";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   const galleryImages = [
     {
-      src: "https://source.unsplash.com/random/800x600/?school,classroom",
+      src: bb,
       alt: "Modern classroom with students"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?children,playing",
+      src: bb,
       alt: "Children playing in schoolyard"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?library,kids",
+      src: bbb,
       alt: "School library with students reading"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?art,class",
+      src: bbb,
       alt: "Art class in session"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?music,children",
+      src: bb,
       alt: "Music lesson at school"
     },
     {
-      src: "https://source.unsplash.com/random/800x600/?sports,school",
+      src: bbb,
       alt: "School sports activities"
     }
   ];

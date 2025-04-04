@@ -3,24 +3,25 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 import { Calendar } from "lucide-react";
 import Footer from "@/components/Footer";
+import ccc from "../assets/ccc.jpg";
 const allNews = [
   {
     title: "Annual Science Fair Showcases Student Innovation",
     date: "May 15, 2023",
     content: "Students amazed visitors with their creative science projects at our annual Science Fair, demonstrating practical applications of classroom concepts.",
-    imageSrc: "https://source.unsplash.com/random/800x600/?science,kids"
+    imageSrc: ccc
   },
   {
-    title: "Sunshine Primary Launches New After-School Programs",
+    title: "Awono Bilogue Launches New After-School Programs",
     date: "April 22, 2023",
     content: "We're excited to announce new after-school activities including coding, chess club, and performing arts to enrich our students' educational experience.",
-    imageSrc: "https://source.unsplash.com/random/800x600/?after,school"
+    imageSrc: ccc
   },
   {
     title: "Our Students Win Regional Mathematics Competition",
     date: "March 10, 2023",
     content: "Congratulations to our mathematics team for their outstanding performance at the Regional Math Olympiad, bringing home first place in team events.",
-    imageSrc: "https://source.unsplash.com/random/800x600/?math,competition"
+    imageSrc: ccc
   }
 ];
 

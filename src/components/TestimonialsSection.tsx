@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Section from "./Section";
 import { Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import aaa from "../assets/aaa.jpg";
 
 interface Testimonial {
   content: string;
@@ -16,19 +17,19 @@ const TestimonialsSection = () => {
       content: "Awono Bilogue has been an amazing school for my daughter. The teachers truly care about each student and create a positive learning environment that fosters growth and curiosity.",
       author: "Sarah Johnson",
       role: "Parent of Grace, Year 3",
-      avatar: "https://source.unsplash.com/random/100x100/?portrait,woman"
+      avatar: aaa
     },
     {
       content: "We couldn't be happier with our decision to enroll our son at Awono bilogue. The curriculum is challenging yet supportive, and we've seen tremendous academic and social growth.",
       author: "Michael Thompson",
       role: "Parent of Alex, Year 5",
-      avatar: "https://source.unsplash.com/random/100x100/?portrait,man"
+      avatar: aaa
     },
     {
       content: "The teachers at Awono bilogue go above and beyond to ensure each child receives personalized attention. My twins have flourished academically and made wonderful friendships.",
       author: "Rebecca Martinez",
       role: "Parent of Sophia & Emma, Year 2",
-      avatar: "https://source.unsplash.com/random/100x100/?portrait,woman,2"
+      avatar: aaa
     }
   ];
   

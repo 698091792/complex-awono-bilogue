@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import Button from "@/components/Button";
 
-const leadershipTeam = [
+const allStaff = [
   {
     name: "Dr. Emily Wilson",
     role: "Founder",
@@ -22,11 +22,7 @@ const leadershipTeam = [
     image: "https://source.unsplash.com/random/400x400/?headshot,woman,2",
     description:
       "Ms. Martinez creates a positive school culture, coordinating extracurricular activities and ensuring student wellbeing and success."
-  }
-];
-
-const allStaff = [
-  ...leadershipTeam,
+  },
   {
     name: "James Parker",
     role: "Math Teacher",
@@ -38,28 +34,31 @@ const allStaff = [
     role: "Science Teacher",
     image: "https://source.unsplash.com/random/400x400/?headshot,woman,3",
     description: "Ms. Simmons inspires curiosity in science, making complex concepts accessible and exciting."
+  },
+  {
+    name: "Laura Simmons",
+    role: "Science Teacher",
+    image: "https://source.unsplash.com/random/400x400/?headshot,woman,3",
+    description: "Ms. Simmons inspires curiosity in science, making complex concepts accessible and exciting."
   }
 ];
 
 export default function TeamSection() {
-  const [viewAll, setViewAll] = useState(false);
-  const teamMembers = viewAll ? allStaff : leadershipTeam;
-
   return (
     <section id="team" className="light">
       <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="heading-lg mb-4">
-            {viewAll ? "Meet Our Staff" : "Meet Our Leadership Team"}
-          </h2>
-          <p className="text-muted-foreground">
-            {viewAll
-              ? "Our dedicated staff members ensure a supportive learning environment for all students."
-              : "Our experienced educational leaders are dedicated to creating a nurturing and inspiring learning environment for all students."}
-          </p>
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <h2 className="heading-lg mb-4">Meet Our Staff</h2>
+          <Button asChild>
+            <Link to="/">Back to Home</Link>
+          </Button>
+          
         </div>
+        <p className="text-muted-foreground mb-10">
+            Our dedicated staff members ensure a supportive learning environment for all students.
+          </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
+          {allStaff.map((member, index) => (
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-subtle border border-border/50"
@@ -78,11 +77,6 @@ export default function TeamSection() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <Button onClick={() => setViewAll(!viewAll)} variant="outline">
-            {viewAll ? "Back to Leadership Team" : "View All Staff Members"}
-          </Button>
         </div>
       </div>
     </section>

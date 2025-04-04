@@ -10,7 +10,7 @@ export const translations = {
     contact: "Contact",
     
     // Hero
-    heroTitle: "Welcome to Sunshine Primary School",
+    heroTitle: "Welcome to Awono Bilogue School",
     heroSubtitle: "Nurturing young minds through quality education",
     heroButton: "Learn More",
     
