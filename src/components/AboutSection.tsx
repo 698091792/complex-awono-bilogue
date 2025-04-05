@@ -12,7 +12,7 @@ const AboutSection = () => {
               <div className="relative z-10 rounded-xl overflow-hidden shadow-glass animate-reveal">
                 <img 
                   src={a} 
-                  alt="Sunshine Primary School building" 
+                  alt="awono bilogue School building" 
                   className="w-full object-cover aspect-[4/3]"
                   loading="lazy"
                 />
@@ -28,13 +28,13 @@ const AboutSection = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-lime-500 text-sm font-medium mb-2 ">
               Our Mission & Vision
             </div>
-            <h2 className="heading-lg animate-reveal">Nurturing Future Leaders Since 2008</h2>
-            <p className="body text-muted-foreground animate-reveal">
+            <h2 className="heading-lg ">Nurturing Future Leaders Since 2008</h2>
+            <p className="body text-muted-foreground ">
               At Complex Bilingual school Awono Bilogue, we believe every child has unique talents and abilities. 
               Our mission is to provide a nurturing and stimulating environment where students can 
               develop intellectually, emotionally, and socially.
             </p>
-            <p className="body text-muted-foreground animate-reveal">
+            <p className="body text-muted-foreground ">
               Founded on principles of respect, responsibility, and excellence, we're committed to 
               developing well-rounded individuals prepared for future challenges. Our dedicated staff 
               works closely with families to ensure each child receives the support they need to thrive.

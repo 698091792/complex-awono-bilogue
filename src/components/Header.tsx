@@ -9,16 +9,18 @@ import complex from "../assets/complex .jpg";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
+      setIsVisible(scrollPosition > 10); // Rendre la barre visible après un léger scroll
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -38,17 +40,17 @@ const Header = () => {
   ];
 
   return (
-    <header 
+    <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-4 px-6 md:px-12",
-        isScrolled ? "glass shadow-subtle" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out py-4 px-6 md:px-12",
+        isScrolled ? "glass shadow-subtle" : "bg-transparent",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
       )}
     >
       <div className="container mx-auto">
-        
         <div className="flex items-center justify-between">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center space-x-2"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -61,7 +63,7 @@ const Header = () => {
             <span className="text-yellow-400 font-medium text-lg md:text-2xl">Awono Bilogue</span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Navigation Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex space-x-8">
               {navigation.map((item) => (
@@ -93,10 +95,12 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className={cn(
-        "fixed inset-0 z-40 bg-background flex flex-col transition-transform duration-300 ease-in-out pt-24 px-6",
-        isMenuOpen ? "translate-x-0" : "translate-x-full"
-      )}>
+      <div
+        className={cn(
+          "fixed inset-0 z-40 bg-background flex flex-col transition-transform duration-300 ease-in-out pt-24 px-6",
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
         <button
           type="button"
           className="absolute top-6 right-6 text-foreground"
@@ -123,3 +127,4 @@ const Header = () => {
 };
 
 export default Header;
+

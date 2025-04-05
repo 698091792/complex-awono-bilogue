@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
 import { Calendar } from "lucide-react";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ccc from "../assets/ccc.jpg";
 const allNews = [
@@ -29,11 +30,9 @@ const AllNewsPage = () => {
   return (
     <Section id="all-news">
       <div className="container mx-auto">
+        <Header />
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <h1 className="heading-lg">All News</h1>
-          <Button asChild>
-            <Link to="/">Back to Home</Link>
-          </Button>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

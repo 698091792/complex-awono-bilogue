@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Header from "@/components/Header";
 import { useNavigate } from "react-router-dom";
 import d from "../assets/d.jpg";
 import Footer from "@/components/Footer";
@@ -51,9 +52,9 @@ const FullGallery = () => {
   return (
     <Section id="full-gallery">
       <div className="container mx-auto">
+        <Header />
         <div className="flex justify-between items-center mb-6">
           <h2 className="heading-lg">Full Gallery</h2>
-          <Button onClick={() => navigate(-1)}>Go Back</Button>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

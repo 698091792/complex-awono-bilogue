@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Section from "@/components/Section";
-import Button from "@/components/Button";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import cc from "../assets/cc.jpg";
 
@@ -47,11 +47,10 @@ const AllProgramsPage = () => {
   return (
     <Section light id="all-programs">
       <div className="container mx-auto m-4">
+        <Header />
         <div className="flex justify-between items-center mb-8">
           <h2 className="heading-lg">All Academic Programs</h2>
-          <Button asChild>
-            <Link to="/">Back to Home</Link>
-          </Button>
+          
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program, index) => (

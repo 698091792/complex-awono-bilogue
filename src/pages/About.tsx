@@ -20,7 +20,7 @@ const About = () => {
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="heading-xl mb-6 ">About Our School</h1>
-              <p className="text-xl text-muted-foreground ">
+              <p className="text-xl text-white ">
                 Discover the values, mission, and people that make Awono Bilogue
                 a special place for learning and growth.
               </p>
@@ -210,7 +210,7 @@ const About = () => {
                   <Users size={24} />
                 </div>
                 <h3 className="heading-sm mb-2">Community</h3>
-                <p className="text-muted-foreground">
+                <p className="text-white">
                   We create a supportive community where students feel valued, safe, and connected, 
                   collaborating with families to ensure each child's success.
                 </p>
@@ -302,7 +302,7 @@ const About = () => {
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="heading-lg">Ready to Join Our Community?</h2>
-              <p className="text-white/80 text-lg ">
+              <p className="text-white text-lg ">
                 Schedule a tour of our campus and learn more about enrollment opportunities for your child.
               </p>
               <div className="pt-4">
