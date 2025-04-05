@@ -15,7 +15,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);  
+      setIsScrolled(scrollPosition > 50);       
       setIsVisible(scrollPosition > 10); // Rendre la barre visible après un léger scroll
     };
 
