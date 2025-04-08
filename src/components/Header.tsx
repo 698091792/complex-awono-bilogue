@@ -15,15 +15,12 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);             
-      setIsVisible(scrollPosition > 10); // Rendre la barre visible après un léger scroll
+      setIsScrolled(scrollPosition > 50);
+      setIsVisible(scrollPosition > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -59,11 +56,15 @@ const Header = () => {
               alt="logo"
               className="w-16 h-16 md:w-24 md:h-24 rounded-full"
             />
-            <span className="text-lime-500 font-bold text-lg md:text-2xl">Groupe Scolaire Bilingue</span>
-            <span className="text-yellow-400 font-medium text-lg md:text-2xl">Awono Bilogue</span>
+            <span className="text-lime-500 font-bold text-lg md:text-2xl">
+              Groupe Scolaire Bilingue
+            </span>
+            <span className="text-yellow-400 font-medium text-lg md:text-2xl">
+              Awono Bilogue
+            </span>
           </Link>
 
-          {/* Navigation Desktop */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex space-x-8">
               {navigation.map((item) => (
@@ -79,12 +80,12 @@ const Header = () => {
             <LanguageSwitcher />
           </div>
 
-          {/* Mobile Navigation Button */}
+          {/* Mobile Nav Button */}
           <div className="md:hidden flex items-center space-x-4">
             <LanguageSwitcher />
             <button
               type="button"
-              className="text-foreground"
+              className="text-black"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -94,37 +95,38 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
-      <div
-        className={cn(
-          "fixed inset-0 z-40 bg-background flex flex-col transition-transform duration-300 ease-in-out pt-24 px-6",
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        <button
-          type="button"
-          className="absolute top-6 right-6 text-foreground"
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40 transition-opacity duration-300"
           onClick={toggleMenu}
-          aria-label="Close menu"
+        />
+      )}
+
+      {/* Horizontal Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          className={cn(
+            "fixed inset-x-0 top-20 z-50 bg-white px-4 py-6 flex items-center justify-center overflow-x-auto shadow-md",
+            isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          )}
         >
-          <X size={32} />
-        </button>
-        <nav className="flex flex-col space-y-6 mt-12 text-center">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className="text-foreground/80 hover:text-lime-500 transition-colors duration-200 text-xl md:text-2xl font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-      </div>
+          <nav className="flex space-x-6">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-black hover:text-lime-500 transition-colors duration-200 text-base font-medium whitespace-nowrap"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
 
 export default Header;
-
