@@ -20,6 +20,55 @@ const TestimonialsSection = () => {
       avatar: aaa
     },
     {
+    content:
+      "Choosing Awono Bilogue for our daughter was the best decision. Her confidence has soared, and she’s genuinely excited to learn every day.",
+    author: "Sarah Mensah",
+    role: "Parent of Ama, Year 3",
+    avatar: aaa
+  },
+  {
+    content:
+      "The teachers balance rigor with real care. Our son has improved in maths and reading, but what impresses us most is his kindness and teamwork.",
+    author: "Daniel Nkou",
+    role: "Parent of Brian, Year 4",
+    avatar: aaa
+  },
+  {
+    content:
+      "Awono Bilogue provides a safe, engaging environment. Our child has developed strong study habits and a love for science projects.",
+    author: "Linda Okoro",
+    role: "Parent of Chinedu, Year 6",
+    avatar: aaa
+  },
+  {
+    content:
+      "We value the bilingual foundation and the school’s emphasis on character. Our daughter now leads group presentations with ease.",
+    author: "Patrick Talla",
+    role: "Parent of Sandrine, Year 5",
+    avatar: aaa
+  },
+  {
+    content:
+      "From the welcoming staff to the structured curriculum, everything inspires growth. Our son’s writing and critical thinking have leapt forward.",
+    author: "Marie Claire",
+    role: "Parent of Joel, Year 2",
+    avatar: aaa
+  },
+  {
+    content:
+      "The enrichment activities are fantastic—music, sports, and clubs. Our child discovered a passion for robotics and problem-solving.",
+    author: "Ibrahim Diallo",
+    role: "Parent of Aisha, Year 6",
+    avatar: aaa
+  },
+  {
+    content:
+      "Consistent communication and supportive teachers make a real difference. Our daughter feels seen, challenged, and celebrated.",
+    author: "Grace Mbappe",
+    role: "Parent of Eliane, Year 1",
+    avatar: aaa
+  },
+    {
       content: "We couldn't be happier with our decision to enroll our son at Awono bilogue. The curriculum is challenging yet supportive, and we've seen tremendous academic and social growth.",
       author: "Michael Thompson",
       role: "Parent of Alex, Year 5",

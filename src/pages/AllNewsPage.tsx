@@ -57,3 +57,4 @@ const AllNewsPage = () => {
 };
 
 export default AllNewsPage;
+ 

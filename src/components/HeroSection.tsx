@@ -42,7 +42,7 @@ const HeroSection = () => {
           <div className="w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-glass">
             <img 
               src={room}
-              alt="Happy students at Sunshine Primary School" 
+              alt="Happy students at Complex-awono-bilogue" 
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -56,7 +56,7 @@ const HeroSection = () => {
           
           {/* Accreditation badge */}
           <div className="absolute -right-5 top-1/4 glass rounded-xl p-4 shadow-glass">
-            <div className="text-sm font-medium">Fully Accredited</div>
+            <div className="text-sm font-medium text-lime-500">Fully Accredited</div>
             <div className="text-xs text-foreground/70">Top-Rated Institution</div>
           </div>
         </div>
